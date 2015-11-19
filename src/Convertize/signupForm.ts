@@ -33,7 +33,7 @@ module Convertize
         submitForm (){
             var xhr = new XMLHttpRequest();
             if ("withCredentials" in xhr) {
-                xhr.open('GET', '../php/api.php?name='+$('#inputName').val()+'&email='+$('#inputEmail').val(), true);
+                xhr.open('GET', 'php/api.php?name='+$('#inputName').val()+'&email='+$('#inputEmail').val(), true);
             }
             xhr.onerror = function() {
                 console.log ('Cors Request Error');
@@ -68,21 +68,21 @@ module Convertize
             // Check name field has a good username
             if (name != '' && name != undefined && name.length > 3){
                 nameOK = true;
-                $("#inputNameIcon").attr("src", "../img/valid-icon.png");
+                $("#inputNameIcon").attr("src", "img/valid-icon.png");
             }else{
-                $("#inputNameIcon").attr("src", "../img/invalid-icon.png");
+                $("#inputNameIcon").attr("src", "img/invalid-icon.png");
             }
 
             // Check email field has a valid email address
             if (email != '' && email != undefined){
                 if (this.checkEmail (email)){
                     emailOK = true;
-                    $("#inputEmailIcon").attr("src", "../img/valid-icon.png");
+                    $("#inputEmailIcon").attr("src", "img/valid-icon.png");
                 }else{
-                    $("#inputEmailIcon").attr("src", "../img/invalid-icon.png");
+                    $("#inputEmailIcon").attr("src", "img/invalid-icon.png");
                 }
             }else{
-                $("#inputEmailIcon").attr("src", "../img/invalid-icon.png");
+                $("#inputEmailIcon").attr("src", "img/invalid-icon.png");
             }
 
             if (emailOK && nameOK){
