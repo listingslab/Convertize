@@ -2,7 +2,10 @@
   "name": "convertize",
   "version": "1.0.0",
   "description": "Convertize Technical Test",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/listingslab/Convertize.git"
+  },
   "keywords": [
     "Bootstrap",
     "PHP",
